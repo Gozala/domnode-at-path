@@ -3,8 +3,7 @@
  * Copyright (C) 2016 Marcel Klehr <mklehr@gmx.net>
  */
 // Paths are arrays, where [] is the root node
-module.exports = nodeAt
-function nodeAt(path, rootNode) {
+const nodeAt = (path, rootNode) => {
   // Returns undefined if the node could not be found
   if(!rootNode) return
 
@@ -20,3 +19,5 @@ function nodeAt(path, rootNode) {
 
   return nodeAt(path.slice(1), curNode)
 }
+
+export default nodeAt
